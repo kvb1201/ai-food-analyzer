@@ -1,63 +1,5 @@
 # AI Food Ingredient Analyzer
 
-AI-powered ingredient and food analysis tool that evaluates healthiness and explains nutritional impact using large language models.
-
-## Overview
-
-This project analyzes food items or ingredient lists and generates AI-based health insights, including nutritional concerns, benefits, and overall healthiness evaluation.
-
-It demonstrates how modern AI (LLMs) can be integrated into full-stack applications for real-world decision support.
-
-## Features
-
-- AI ingredient analysis
-- Healthiness evaluation
-- Nutritional explanation
-- REST API endpoint
-- Modern UI (planned)
-- Deployable architecture
-
-## Tech Stack
-
-- Backend: Node.js / Express (Antigravity scaffold)
-- AI: LLM API integration
-- Frontend: React (Aura Builder)
-- Dev: Cursor AI IDE
-
-## API
-
-### POST `/analyze-food`
-
-**Input**
-```json
-{
-  "text": "pizza with cheese and processed meat"
-}
-
-Response
-{
-  "analysis": "High in saturated fats and sodium. Frequent consumption may increase cardiovascular risk..."
-}
-
-Architecture
-User → UI → Backend → AI → Response
-
-Status
-🚧 In development 
-
-
-Future Improvements
-	•	Nutrition scoring
-	•	Ingredient detection from images
-	•	Personalized dietary feedback
-	•	Food recommendation engine
-
-Author
-
-Kavya Bhatiya
-AI Student, SVNIT Surat
-# AI Food Ingredient Analyzer
-
 A lightweight AI web app that analyzes the health impact of foods and ingredients using a large language model.
 
 This project was built in ~3 hours as a focused exercise to learn and practice modern AI development tools and rapid prototyping workflows for hackathons.
@@ -99,19 +41,38 @@ It demonstrates how modern AI tools can accelerate full-stack development from i
 
 ---
 
+## API
+
+### POST `/analyze-food`
+
+**Request**
+```json
+{
+  "text": "pizza with cheese and processed meat"
+}
+```
+
+**Response**
+```json
+{
+  "analysis": "High in saturated fats and sodium. Frequent consumption may increase cardiovascular risk..."
+}
+```
+
+---
+
 ## Example
 
-Input:
+**Input**
 ```
 instant noodles
 ```
 
-Output:
-- Health concerns
-- Benefits
-- Overall evaluation
-- Health score
-- Macro estimates
+**Output (excerpt)**
+- Health concerns: High sodium and saturated fats
+- Benefits: Quick energy and convenience
+- Overall evaluation: Consume occasionally as part of a balanced diet
+- Health score: 65/100
 
 ---
 
